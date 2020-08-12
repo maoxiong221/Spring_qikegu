@@ -35,5 +35,8 @@
     <!-- logging 切面定义 -->
     <bean id="logging" class="com.qikegu.demo.Logging"/>
     <bean id="contextStartEventHandler" class="com.qikegu.demo.ContextStartEventHandler"></bean>
+    <bean id="customEventPublisher" class="com.qikegu.demo.CustomEventPublisher"/>
+    <bean id="customEventHandler" class="com.qikegu.demo.CustomEventHandler"/>
+
 
 </beans>

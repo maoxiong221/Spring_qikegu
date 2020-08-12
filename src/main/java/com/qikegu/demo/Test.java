@@ -13,7 +13,11 @@ public class Test {
 //        user.printThrowException();
 //        ((ClassPathXmlApplicationContext) context).close();
 
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        context.start();
+//        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//        context.start();
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        CustomEventPublisher publisher = (CustomEventPublisher) context.getBean("customEventPublisher");
+        publisher.publish();
     }
 }
