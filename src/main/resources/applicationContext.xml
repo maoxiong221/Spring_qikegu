@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customerBean" class="com.qikegu.demo.Customer">
+        <property name="name" value="奇客谷"></property>
+    </bean>
+
+    <bean id="player" class="com.qikegu.demo.Player">
+        <constructor-arg ref="weapon"/>
+    </bean>
+
+    <bean id="weapon" class="com.qikegu.demo.Gun">
+    </bean>
+
+<!--    <bean id="weapon" class="com.qikegu.demo.Sword">-->
+<!--    </bean>-->
+
+    <!-- App Bean定义 -->
+<!--    <bean id="app" class="com.qikegu.demo.App">-->
+
+        <!-- 构造函数注入单个依赖项实例 -->
+<!--        <constructor-arg ref="logger"/>-->
+
+        <!-- 构造函数注入依赖项实例数组 -->
+        <!-- <constructor-arg>
+         <list>
+           <ref bean="database"/>
+           <ref bean="mail"/>
+           <ref bean="logger"/>
+         </list>
+        </constructor-arg> -->
+<!--    </bean>-->
+
+    <!-- Service bean （依赖项）定义 -->
+<!--    <bean id="database" class="Database"/>-->
+<!--    <bean id="logger" class="Logger"/>-->
+<!--    <bean id="mail" class="Mail"/>-->
+
+</beans>
